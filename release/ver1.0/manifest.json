@@ -1,0 +1,27 @@
+{
+    "manifest_version" : 3,
+    "name" : "Pixiv Extension",
+    "version" : "1.0",
+    "description" : "pixiv検索欄に表示される人気タグのイラストへ直接飛べる拡張機能",
+    "icons" : {
+        "16" : "icon/pixext16.png",
+        "48" : "icon/pixext48.png",
+        "128" : "icon/pixext128.png"
+    },
+    "permissions": [
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.pixiv.net/*"
+            ],
+            "js": [
+                "linkchanger.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://www.pixiv.net/*"
+    ]
+  }
